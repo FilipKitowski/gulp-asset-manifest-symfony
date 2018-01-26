@@ -1,5 +1,5 @@
 {
-    "name": "gulp-asset-manifest",
+    "name": "gulp-asset-manifest-symfony",
     "version": "0.0.6",
     "description": "gulp plugin for adding generated assets to a manifest file",
     "license": "MIT",
