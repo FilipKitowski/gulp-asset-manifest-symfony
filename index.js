@@ -43,7 +43,7 @@ function resetManifestFile(bundlename, filename) {
             fileList = JSON.parse(contents);
         }
         // Reset or create array for each bundle
-        fileList[bundlename] = [];
+        fileList[bundlename] = '';
     }
 
     // Write file list to manifest file
@@ -113,6 +113,8 @@ module.exports = function(options) {
         }
 
         fileList[options.bundleName].push(pathPrepend + filename);
+
+        fileList[options.bundleName] = fileList[options.bundleName][0];
 
         // Write list to asset file
         writeManifestFile(fileList, options.manifestFile);
